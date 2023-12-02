@@ -1,15 +1,6 @@
 #header {
 text-align : center;
 }
-#indexBody {
-    background-color: #535453;
-}
-#fname {
-    background-color: #535458;
-}
-#password {
-    background-color: #535458;
-}
 #form{
     margin-top:30%;
     text-align:center;
@@ -25,6 +16,9 @@ text-align : center;
 }
 .allText {
     color: #5ca33c;
+}
+.blackBackground {
+    background-color: #535458;
 }
 #submit {
     background-color: #535458;
