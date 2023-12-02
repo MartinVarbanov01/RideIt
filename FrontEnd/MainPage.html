@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="blackBackground">
+    <table style="width:100%; height:fit-content">
+        <tr style="height:15%">
+            <td>Logo</td>
+            <td style="text-align:right"><a href="Login.html"><input class="allText" type="button" id="submit" value="Login"></a><a href="Register.html"><input class="allText" type="button" id="submit" value="Register"></a></td>
+        </tr>
+        <tr>
+            <td style="display:block" class="allText notselect" onmouseover="hoveron(this)" onmouseout="hoverout(this)" onclick="displayMenu()">Menu</td>
+            <td style="width:100%; height:500%; text-align:center" rowspan="6" id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23468.20015942335!2d23.38223580359114!3d42.67141982542105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85dcebdaabe7%3A0xa5d16f61da10637a!2sUNIBIT%202!5e0!3m2!1sen!2sbg!4v1701558818660!5m2!1sen!2sbg" width=95% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td class="allText notselect menu" onmouseover="hoveron(this)" onmouseout="hoverout(this)">Profile</td>
+        </tr>
+        <tr>
+            <td class="allText notselect menu" onmouseover="hoveron(this)" onmouseout="hoverout(this)">Blogs</td>
+        </tr>
+        <tr>
+            <td class="allText notselect menu" onmouseover="hoveron(this)" onmouseout="hoverout(this)">Marathons</td>
+        </tr>
+        <tr>
+            <td class="allText notselect menu" onmouseover="hoveron(this)" onmouseout="hoverout(this)">Routes</td>
+        </tr>
+        <tr>
+            <td style="height:250px"></td>
+        </tr>
+    </table>
+<script>
+    var hidden = true;
+    displayMenu();
+    displayMenu();
+    function displayMenu() {
+        if (hidden) {
+            var menu = document.getElementsByClassName("menu");
+            for (let i = 0; i < menu.length; i++) {
+                menu.item(i).className = "allText notselect menu show";
+            }
+            hidden = false;
+        }
+        else {
+            var menu = document.getElementsByClassName("menu");
+            for (let i = 0; i < menu.length; i++) {
+                menu.item(i).className = "allText notselect menu hide";
+            }
+            hidden = true;
+        }
+        
+    }
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    function hoveron(x) {
+        x.style.backgroundColor = 'gray';
+    }
+    function hoverout(x) {
+        sleep(50).then(() => { x.style.backgroundColor = '#363636'; });
+    }
+</script>
+</body>
+</html>
