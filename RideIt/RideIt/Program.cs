@@ -1,3 +1,4 @@
+using Carter;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RideIt.Features.Users;
@@ -28,6 +29,7 @@ builder.Services.AddMediatR(config =>
 builder.Services.AddScoped<IFileSystemService, FileSystemService>();
 builder.Services.AddScoped<UserManager>();
 builder.Services.AddScoped<IPasswordHasher<User>,PasswordHasher<User>>();
+builder.Services.AddCarter();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -42,5 +44,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapCarter();
 
 app.Run();

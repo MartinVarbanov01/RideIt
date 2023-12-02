@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andrey-PC\\Desktop\\hak\\RideIt\\RideIt\\RideIt.csproj": {}
+    "C:\\Users\\Andrey-PC\\Desktop\\New folder (2)\\RideIt\\RideIt\\RideIt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andrey-PC\\Desktop\\hak\\RideIt\\RideIt\\RideIt.csproj": {
+    "C:\\Users\\Andrey-PC\\Desktop\\New folder (2)\\RideIt\\RideIt\\RideIt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andrey-PC\\Desktop\\hak\\RideIt\\RideIt\\RideIt.csproj",
+        "projectUniqueName": "C:\\Users\\Andrey-PC\\Desktop\\New folder (2)\\RideIt\\RideIt\\RideIt.csproj",
         "projectName": "RideIt",
-        "projectPath": "C:\\Users\\Andrey-PC\\Desktop\\hak\\RideIt\\RideIt\\RideIt.csproj",
+        "projectPath": "C:\\Users\\Andrey-PC\\Desktop\\New folder (2)\\RideIt\\RideIt\\RideIt.csproj",
         "packagesPath": "C:\\Users\\Andrey-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andrey-PC\\Desktop\\hak\\RideIt\\RideIt\\obj\\",
+        "outputPath": "C:\\Users\\Andrey-PC\\Desktop\\New folder (2)\\RideIt\\RideIt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -31,8 +31,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -43,12 +43,30 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "Carter": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

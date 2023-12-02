@@ -20,14 +20,17 @@ public class UserManager
     }
     public User CreateUser(CreateUserCommand request)
     {
-        
-        return new User()
+        var user = new User()
         {
             FirstName = request.FirstName,
             SecondName = request.SecondName,
-            UserName = request.UserName,
-            /*ImageUrl = */
+            UserName = request.UserName
         };
+        
+        user.Password = _hasher.HashPassword(user, request.Password);
+        user.ImageUrl = _fileSystemService.GetImageUrl(request.Image);
+
+        return user;
     }
 
     public async Task<User?> GetByEmailAsync(string userName)
