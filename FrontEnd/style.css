@@ -5,10 +5,17 @@ text-align : center;
     background-color: #535453;
 }
 #fname {
-    background-color: #535453;
+    background-color: #535458;
 }
 #password {
-    background-color: #535453;
+    background-color: #535458;
+}
+#form{
+    margin-top:30%;
+    text-align:center;
+}
+.right{
+    text-align:right;
 }
 .center {
     display: block;
@@ -18,4 +25,10 @@ text-align : center;
 }
 .allText {
     color: #5ca33c;
+}
+#submit {
+    background-color: #535458;
+}
+table, td, tr {
+    border:none;
 }
