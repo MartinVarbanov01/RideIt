@@ -20,9 +20,16 @@ text-align : center;
 .blackBackground {
     background-color: #535458;
 }
+.hidden{
+    display:none;
+}
 #submit {
     background-color: #535458;
 }
 table, td, tr {
     border:none;
+}
+#file-input-label {
+    border: 1px solid black;
+    border-radius: 4%;
 }
