@@ -15,9 +15,4 @@ public class FileSystemService : IFileSystemService
         
         return path;
     }
-
-    public bool DeleteFile(string filePath)
-    {
-        throw new NotImplementedException();
-    }
 }

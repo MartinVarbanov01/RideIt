@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using RideIt.Features.Blogs;
 using RideIt.Features.Marathons;
@@ -10,6 +11,11 @@ public class RideItDbContext : DbContext
     public RideItDbContext(DbContextOptions<RideItDbContext> options) : base(options)
     {
         
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
     public DbSet<User> Users { get; set; }

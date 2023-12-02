@@ -8,7 +8,7 @@ public class GetImageEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("images/{filename}", Task<Results<FileStreamHttpResult, NotFound>>(string filename,[FromServices] IWebHostEnvironment env) =>
+        app.MapGet("api/images/{filename}", Task<Results<FileStreamHttpResult, NotFound>>(string filename,[FromServices] IWebHostEnvironment env) =>
                 {
                     var imagePath = Path.Combine(env.ContentRootPath, "Pics", filename);
 
