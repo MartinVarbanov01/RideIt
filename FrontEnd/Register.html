@@ -3,21 +3,33 @@
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="indexBody">
+<body class="blackBackground">
     <img style="margin-top:15%" src="https://drive.google.com/uc?export=view&id=1H2YbBo0rOQukVj23vCHygM5r9LTd9qmq" class="center">
     <form id="form" action="/" method="post">
         <table class="right">
             <tr>
                 <td><lable class="allText" for="Username"><strong>Username: </strong></lable></td>
-                <td><input type="text" class="allText" id="fname" name="fname"></td>
+                <td><input type="text" class="allText blackBackground" id="fname" name="username"></td>
+            </tr>
+            <tr>
+                <td><lable class="allText" for="FirstName"><strong>First Name: </strong></lable></td>
+                <td><input type="text" class="allText blackBackground" id="fname" name="fname"></td>
+            </tr>
+            <tr>
+                <td><lable class="allText" for="LastName"><strong>Last Name: </strong></lable></td>
+                <td><input type="text" class="allText blackBackground" id="lname" name="lname"></td>
             </tr>
             <tr>
                 <td><lable class="allText" for="Password"><strong>Password: </strong></lable></td>
-                <td><input type="password" class="allText" id="password" name="password"></td>
+                <td><input type="password" class="allText blackBackground" id="password" name="password"></td>
             </tr>
             <tr>
                 <td><lable class="allText" for="ConfirmPassword"><strong>Confirm password: </strong></lable></td>
-                <td><input type="password" class="allText" id="password" name="password"></td>
+                <td><input type="password" class="allText blackBackground" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><lable class="allText" for="ConfirmPassword"><strong>Profile Picture </strong></lable></td>
+                <td><input type="file" class="allText blackBackground" id="fileToUpload" name="profPic"></td>
             </tr>
             <tr>
                 <td></td>
