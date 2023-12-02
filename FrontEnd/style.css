@@ -1,0 +1,21 @@
+#header {
+text-align : center;
+}
+#indexBody {
+    background-color: #535453;
+}
+#fname {
+    background-color: #535453;
+}
+#password {
+    background-color: #535453;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.allText {
+    color: #5ca33c;
+}
