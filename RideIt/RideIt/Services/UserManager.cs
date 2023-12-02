@@ -1,4 +1,4 @@
-/*using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RideIt.Features.Users;
 using RideIt.Infrastructure;
@@ -26,7 +26,7 @@ public class UserManager
             FirstName = request.FirstName,
             SecondName = request.SecondName,
             UserName = request.UserName,
-            ImageUrl = 
+            /*ImageUrl = */
         };
     }
 
@@ -36,4 +36,4 @@ public class UserManager
 
         return user;
     }
-}*/
+}

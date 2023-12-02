@@ -1,4 +1,4 @@
-/*using Carter;
+using Carter;
 using MediatR;
 using RideIt.Infrastructure;
 using RideIt.Services;
@@ -47,4 +47,4 @@ internal sealed class CreateUserHamdler : IRequestHandler<CreateUserCommand, Use
 
         return await Task.FromResult(user);
     }
-}*/
+}

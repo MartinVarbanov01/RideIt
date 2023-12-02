@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using RideIt.Features.Users;
 using RideIt.Infrastructure;
+using RideIt.Services;
+using RideIt.Services.Abstraction;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +25,9 @@ builder.Services.AddMediatR(config =>
     config.RegisterServicesFromAssemblies(typeof(Program).Assembly);
 });
 
+builder.Services.AddScoped<IFileSystemService, FileSystemService>();
+builder.Services.AddScoped<UserManager>();
+builder.Services.AddScoped<IPasswordHasher<User>,PasswordHasher<User>>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
