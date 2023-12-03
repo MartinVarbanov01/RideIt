@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider App</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* New font: Roboto */
+            background-color: #f0f5e1; /* Light green background color */
+            color: #333; /* Dark text color for contrast */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #d1e8e2; /* Lighter green background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333; /* Dark text color */
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background-color: #4caf50; /* Green color for contrast */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #388e3c; /* Darker green color on hover */
+        }
+
+        h2 {
+            color: #4caf50; /* Green color for headings */
+        }
+
+        a {
+            color: #3498db; /* Blue color for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="form-container" id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <label for="LoginUserName">Username:</label>
+            <input type="text" id="LoginUserName" name="LoginUserName" required>
+
+            <label for="LoginPassword">Password:</label>
+            <input type="password" id="LoginPassword" name="LoginPassword" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+    </div>
+
+    <div class="form-container" id="registerForm" style="display: none;">
+        <h2>Register</h2>
+        <form id="userForm" onsubmit="event.preventDefault(); register();">
+            <label for="UserName">Username:</label>
+            <input type="text" id="UserName" name="UserName" required>
+
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" required>
+
+            <label for="SecondName">Second Name:</label>
+            <input type="text" id="SecondName" name="SecondName" required>
+
+            <label for="Password">Password:</label>
+            <input type="password" id="Password" name="Password" required>
+
+            <label for="ConfirmPassword">Confirm Password:</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var loginForm = document.getElementById("loginForm");
+            var registerForm = document.getElementById("registerForm");
+
+            loginForm.style.display = loginForm.style.display === "none" ? "block" : "none";
+            registerForm.style.display = registerForm.style.display === "none" ? "block" : "none";
+        }
+
+        function login() {
+            // Implement login logic using fetch() to your authentication endpoint
+            // Example: fetch('https://your-api/login', { method: 'POST', body: formData })
+            // Handle the response accordingly
+        }
+
+        async function register() {
+            // Get the input values from the form
+            const userName = document.getElementById('UserName').value;
+            const password = document.getElementById('Password').value;
+            const confirmPassword = document.getElementById('ConfirmPassword').value;
+            const firstName = document.getElementById('FirstName').value;
+            const secondName = document.getElementById('SecondName').value;
+
+            // Specify the URL of the API you want to post data to
+            const apiUrl = 'https://api/register';
+
+            // Data to be sent in the request body
+            const postData = {
+                UserName: userName,
+                Password: password,
+                ConfirmPassword: confirmPassword,
+                FirstName: firstName,
+                SecondName: secondName
+            };
+
+            // Use the fetch function with additional options for a POST request
+            fetch("api/register", {
+                method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                body: JSON.stringify(postData) // Convert the data to JSON format
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Handle the data received from the API after the successful registration
+                    console.log(data);
+                })
+                .catch(error => {
+                    // Handle errors during the fetch
+                    console.error('Error during fetch:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

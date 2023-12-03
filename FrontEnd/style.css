@@ -15,19 +15,20 @@ text-align : center;
     width: 50%;
 }
 .allText {
+    font-family:Roboto;
     color: #5ca33c;
 }
 .blackBackground {
-    background-color: #535458;
+    background-color: #f0f5e1;
 }
 .hidden{
     display:none;
 }
 #submit {
-    background-color: #535458;
+    background-color: #d1e8e2;
 }
 table, td, tr {
-    border:none;
+    border:solid;
     border-spacing : 0px;
     vertical-align:top;
 }
@@ -43,11 +44,17 @@ table, td, tr {
 }
 .notselect {
     user-select: none;
-    text-align:center;
+    text-align: center;
     width: 70px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top:10px;
-    padding-bottom:10px;
-    background-color: #363636;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d1e8e2;
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
