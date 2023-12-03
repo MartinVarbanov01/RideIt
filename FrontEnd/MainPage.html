@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td style="width:25%">
-                <table>
+                <table style="padding-top:5px">
                     <tr>
                         <td style="display:block" class="allText notselect" onmouseover="hoveron(this)" onmouseout="hoverout(this)" onclick="displayMenu()">Menu</td>
                     </tr>
@@ -33,18 +33,44 @@
             <td colspan="2">
 
                 <!--DefaultMap-->
-                <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23468.20015942335!2d23.38223580359114!3d42.67141982542105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85dcebdaabe7%3A0xa5d16f61da10637a!2sUNIBIT%202!5e0!3m2!1sen!2sbg!4v1701558818660!5m2!1sen!2sbg" width=95% height="475" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23468.20015942335!2d23.38223580359114!3d42.67141982542105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85dcebdaabe7%3A0xa5d16f61da10637a!2sUNIBIT%202!5e0!3m2!1sen!2sbg!4v1701558818660!5m2!1sen!2sbg" width=95% height="475" style="border:0;padding-top:5px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <!--UserProfile-->
                 <table style="height: 450px; overflow-y: scroll; display: none;" id="profile">
                     <tr>
-                        <td><img class="avatar" src="https://drive.google.com/uc?export=view&id=1EE1GPCpE_qneN7eKc1DaeP-lUklkPpk8" /></td>
-                        <td style="vertical-align:middle; width:80%" id="name">Anna Petrova</td>
+                        <td>
+                            <img class="avatar" src="https://drive.google.com/uc?export=view&id=1EE1GPCpE_qneN7eKc1DaeP-lUklkPpk8" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:middle; width:80%; font-size:large" id="name"><strong>Anna Petrova</strong></td>
                         <td style="width:35%" class="allText notselect" onmouseover="hoveron(this)" onmouseout="hoverout(this)">Edit</td>
                     </tr>
+                    <tr>
+                        <td>
+                            Age: 56
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align:left">
+                            </br>
+                            About me
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table style="height: 200px;display:block;overflow-y:scroll;">
+                                <tr>
+                                    <!--Description-->
+                                    <td id="description">
+                                        Meet Anna, an avid bike enthusiast with an unbridled passion for the open road.</br>
+                                        Whether it's navigating through scenic trails or conquering city streets, she finds pure joy in the rhythm of pedaling and the wind against her face. With a collection of sleek bikes and a wardrobe full of cycling gear, Anna is always ready for the next adventure. A tech-savvy cyclist, they meticulously track their rides, constantly seeking new routes and challenges. Beyond the thrill of cycling, she appreciates the sense of freedom and mindfulness that comes with each pedal stroke, making biking not just a hobby but a way of life.
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
                 </table>
-
-                <!--Routes-->
                 <table style="display: none;height: 475px; overflow-y: scroll;" id="routes">
                     <tr>
                         <td>
@@ -89,8 +115,6 @@
                         </td>
                     </tr>
                 </table>
-
-                <!--Marathon-->
                 <table style="display: none;height: 475px; overflow-y: scroll;" id="marathon">
                     <tr>
                         <td>
@@ -118,7 +142,72 @@
                 <table style="display: none;height: 475px; overflow-y: scroll;" id="blogs">
                     <tr>
                         <td>
-                            ok
+                            </br>
+                            <img class="miniavatar" src="https://drive.google.com/uc?export=view&id=1lXf4_AjwJB0Z74RtZM-BuiB37x_w8-gl">
+                        </td>
+                        <th style="vertical-align:bottom;text-align:left">
+                            Title
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            </br>
+                            <img class="miniavatar" src="https://drive.google.com/uc?export=view&id=1AIvTonK9g3ZT-afx_ozlMgesIL7YF_Oa">
+                        </td>
+                        <th style="vertical-align:bottom;text-align:left">
+                            Title
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            </br>
+                            <img class="miniavatar" src="https://drive.google.com/uc?export=view&id=1w1kO3pX6LPww17gUIK2hq20L9ptiLUUU">
+                        </td>
+                        <th style="vertical-align:bottom;text-align:left">
+                            Title
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            </br>
+                            <img class="miniavatar" src="https://drive.google.com/uc?export=view&id=1338RVz_462Fga5t-cS34jF1rqUKngl87">
+                        </td>
+                        <th style="vertical-align:bottom;text-align:left">
+                            Title
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            </br>
+                            <img class="miniavatar" src="https://drive.google.com/uc?export=view&id=1lXf4_AjwJB0Z74RtZM-BuiB37x_w8-gl">
+                        </td>
+                        <th style="vertical-align:bottom;text-align:left">
+                            Title
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
                         </td>
                     </tr>
                 </table>
