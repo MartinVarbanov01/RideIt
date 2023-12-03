@@ -105,7 +105,7 @@
             <label for="ConfirmPassword">Confirm Password:</label>
             <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
 
-            <button type="submit">Register</button>
+            <button type="button" onclick="toggleForms()">Register</button>
         </form>
         <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
     </div>
@@ -120,6 +120,7 @@
         }
 
         function login() {
+            window.location.href = "MainPage.html";
             // Implement login logic using fetch() to your authentication endpoint
             // Example: fetch('https://your-api/login', { method: 'POST', body: formData })
             // Handle the response accordingly
